@@ -1,0 +1,8 @@
+*.swp
+__pycache__
+*.pyc
+/**/_build
+/**/deps
+/**/old
+/**/*.ez
+/**/node_modules
