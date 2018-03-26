@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   phx:
-    image: phx
+    image: phx:tst
     build:
       context: ../..
       dockerfile: docker/tst/Dockerfile
