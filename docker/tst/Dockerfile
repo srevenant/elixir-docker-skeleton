@@ -26,11 +26,11 @@ COPY src/mix.* /app/src/
 RUN mix deps.get && \
     mix deps.compile
 COPY src/ /app/src/
-RUN sed -i -e 's/^\(\s*\)build_version: "[0-9].*$/\1build_version: "'$BUILD_VERSION'",/' mix.exs
-#    (cd assets && \
-#     npm install && \
-#     ./node_modules/.bin/brunch build --production ) &&\
-#    mix phx.digest && \
+RUN sed -i -e 's/^\(\s*\)build_version: "[0-9].*$/\1build_version: "'$BUILD_VERSION'",/' mix.exs && \
+    (cd assets && \
+     npm install && \
+     ./node_modules/.bin/brunch build --production ) && \
+    mix phx.digest
 
 COPY docker/$BUILD_ENV /docker/
 

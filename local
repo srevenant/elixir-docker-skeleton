@@ -24,7 +24,7 @@ sys.argv.pop(0)
 def main():
     os.environ['PYTHONUNBUFFERED'] = 'true'
     # reminder: update syntax()
-    mode = getarg("mode", "p?rd|prod", "d?ev", "t?esting|test")[0]
+    mode = getarg("mode", "p?rd|prod", "d?ev", "t?st|testing|test")[0]
     # reminder: update syntax()
     action = getarg("action", "run", "iex", "mix", "ps", "down", "up", "exec",
                     "sh", "run-sh", "raw-sh", "kill", "build", "scale", "prune")[0]

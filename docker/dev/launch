@@ -15,7 +15,10 @@
 #chmod 600 ~/.ssh/*
 
 ################################################
-#cd app
+pwd
+ls -l
+exec mix phx.server
+
 if [ ! -d deps -o ! -d _build ]; then
     rm -rf _build deps # cleanup
 fi

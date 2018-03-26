@@ -2,6 +2,7 @@
 __pycache__
 *.pyc
 old
+src/
 # App artifacts
 /**/_build
 /**/db
