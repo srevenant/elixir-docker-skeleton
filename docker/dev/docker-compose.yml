@@ -11,7 +11,9 @@ services:
     volumes:
       - ../../src:/app/src
       - shared:/shared
-#      - ../../docker:/app/docker
+      - ../../docker/dev:/docker
+    depends_on:
+      - db
     ports:
       - "4000:4000"
   db:
